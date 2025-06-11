@@ -16,7 +16,8 @@
         "vscjava.vscode-spring-initializr",
         "vmware.vscode-spring-boot",
         "redhat.vscode-xml",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "vscjava.vscode-maven"
       ],
       "settings": {
         "java.jdt.ls.java.home": "/usr/local/sdkjdk-21",
@@ -34,5 +35,5 @@
     "JAVA_HOME": "/usr/local/sdkjdk-21"
   },
   "forwardPorts": [8080],
-  "postCreateCommand": "cd customer-service && mvn clean install"
+  "postCreateCommand": "mvn clean install"
 }
