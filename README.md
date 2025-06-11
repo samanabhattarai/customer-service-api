@@ -3,12 +3,21 @@
 A Spring Boot REST API to manage customer records with tier-based classification.
 
 ## Build & Run
-``
+```
 mvn clean install
-``
-``
+
 mvn spring-boot:run
-``
+```
+### Development with GitHub Codespaces
+
+This project is configured for GitHub Codespaces with Java 21. To get started:
+
+1. Click on the "Code" button in the GitHub repository
+2. Select the "Codespaces" tab
+3. Click "Create codespace on main"
+
+The environment will be automatically set up with Java 21, Maven, and necessary VS Code extensions.
+
 
 ## Request and Response samples
 

@@ -1,0 +1,38 @@
+{
+  "name": "Customer Management API Development",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": true,
+      "installGradle": false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr",
+        "vmware.vscode-spring-boot",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/local/sdkjdk-21",
+        "java.configuration.runtimes": [{
+          "name": "JavaSE-21",
+          "path": "/usr/local/sdkjdk-21",
+          "default": true
+        }],
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "remoteEnv": {
+    "JAVA_HOME": "/usr/local/sdkjdk-21"
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "cd customer-service && mvn clean install"
+}
