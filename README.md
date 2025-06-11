@@ -69,5 +69,6 @@ DELETE /customers/f194d339-2511-4ede-bd87-3c5790625988
 ## Assumptions
 - The API uses a simple in-memory database to store customer records.
 - The API does not handle authentication or authorization.
+- Database changes are managed using Liquibase.
 - The API assumes the customer tier will be Silver if "last purchase date" is not available even if the spend is over 1000
-
+- H2 console is available at http://localhost:8080/h2-console for local development (username: sa, password: empty)
