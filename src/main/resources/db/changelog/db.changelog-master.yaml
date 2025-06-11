@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: samana
+      changes:
+      - createTable:
+          tableName: customers
+          schemaName: public
+          columns:
+            - column:
+                name: id
+                type: varchar(36)
+                autoIncrement: false
+                constraints:
+                  primaryKey: true
+                  nullable: false
+                  primaryKeyName: customers_id_pk
+            - column:
+                name: name
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: email
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: annual_spend
+                type: double(10,2)
+                constraints:
+                  nullable: true
+            - column:
+                name: last_purchase_date
+                type: timestamptz
+                constraints:
+                  nullable: true
+  - include:
+      file: classpath:db/changelog/db.changelog-customer.yaml

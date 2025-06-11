@@ -1,0 +1,18 @@
+package com.samana.customerservice.persistence;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import javax.sql.DataSource;
+
+@Configuration
+public class JpaConfig {
+
+    @Bean
+    @Profile ("local")
+    public DataSource dataSource() {
+        return new org.h2.jdbcx.JdbcDataSource();
+    }
+
+}

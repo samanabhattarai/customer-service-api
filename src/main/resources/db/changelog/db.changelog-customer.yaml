@@ -1,0 +1,74 @@
+databaseChangeLog:
+  - property:
+      name: currentTime
+      value: now()
+      dbms: h2
+  - changeSet:
+      id: 1000
+      author: samana
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: "f194d339-2511-4ede-bd87-3c5790625988"
+              - column:
+                  name: name
+                  value: "Jane Doe"
+              - column:
+                  name: email
+                  value: "jane@test.com"
+              - column:
+                  name: annual_spend
+                  value: "500.00"
+              - column:
+                  name: last_purchase_date
+                  value: ${currentTime}
+            tableName: customers
+            schemaName: public
+  - changeSet:
+      id: 1001
+      author: samana
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: "da46ab2a-a631-4b33-9637-6903a6d1dec3"
+              - column:
+                  name: name
+                  value: "John Doe"
+              - column:
+                  name: email
+                  value: "john@test.com"
+              - column:
+                  name: annual_spend
+                  value: "1200.00"
+              - column:
+                  name: last_purchase_date
+                  value: ${currentTime}
+            tableName: customers
+            schemaName: public
+  - changeSet:
+      id: 1002
+      author: samana
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: "827d6308-5e19-416f-9789-31f1ea10d40d"
+              - column:
+                  name: name
+                  value: "John Travolta"
+              - column:
+                  name: email
+                  value: "travolta@test.com"
+              - column:
+                  name: annual_spend
+                  value: "11000.00"
+              - column:
+                  name: last_purchase_date
+                  value: ${currentTime}
+            tableName: customers
+            schemaName: public
